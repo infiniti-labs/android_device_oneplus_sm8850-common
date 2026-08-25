@@ -127,7 +127,6 @@ vendor/lib64/libbt-hidlclient.so
 vendor/lib64/vendor.qti.hardware.bluetooth.btavsprovider-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.fm-V1-ndk.so
-vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # C2PA
 vendor/bin/hw/vendor.qti.hardware.c2pa-aidl-service-qti
@@ -737,10 +736,6 @@ vendor/lib64/qsn1rt43270_vga.bin
 vendor/lib64/qsn2all.bin
 vendor/lib64/qsn3_video.bin
 vendor/lib64/qsn3all.bin
-
-# QSPA
-system_ext/etc/init/qspa_system.rc
-system_ext/etc/qspa/qspa_default.rc
 
 # QSPM
 vendor/bin/vendor.qti.qspmhal-service
