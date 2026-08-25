@@ -24,6 +24,10 @@ persist.bluetooth.snooplogfilter.profiles.rfcomm.enabled=true
 ro.bluetooth.finder.supported=true
 ro.bluetooth.leaudio_offload.supported=true
 
+# Camera
+persist.vendor.camera.privapp.list=org.lineageos.aperture
+vendor.camera.aux.packagelist=org.lineageos.aperture,org.lineageos.aperture.dev
+
 # CNE
 persist.vendor.cne.feature=1
 
