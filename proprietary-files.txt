@@ -174,10 +174,6 @@ vendor/lib64/libDcfHalFramework.so
 vendor/lib64/libDcfHalLogger.so
 
 # Diag
-system/lib64/vendor.qti.diaghal-V1-ndk.so:system_ext/lib64/vendor.qti.diaghal-V1-ndk.so
-system_ext/lib64/libdiag_system.so
-system_ext/lib64/libdiagatbparser_system.so
-system_ext/lib64/vendor.qti.diaghal@1.0.so
 vendor/bin/diag-router
 vendor/etc/init/vendor.qti.diag.rc
 vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
@@ -400,8 +396,6 @@ odm/lib64/libdolbyeglcore.so
 odm/lib64/libdolbyottcameracontrol.so
 odm/lib64/libdolbyproxyandroid.so
 odm/lib64/libqcodec2_dolbydecoderfilter.so
-system_ext/lib64/libmmosal.so
-system_ext/lib64/libmmparser_lite.so
 vendor/bin/hw/qconfigservice
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/hw/vendor.qti.media.c2audio@1.0-service
@@ -458,7 +452,7 @@ vendor/etc/vintf/manifest/vendor.qti.MemHal.xml
 vendor/lib64/libmemgen.so
 vendor/lib64/libmemhalutils.so
 vendor/lib64/libqti-MemHal-client.so
-vendor/lib64/vendor.qti.MemHal-V1-ndk.so
+vendor/lib64/vendor.qti.MemHal-V1-ndk.so;MODULE_SUFFIX=_vendor
 
 # Misc
 odm/etc/init/init.oppo.reserve.rc
@@ -592,7 +586,7 @@ vendor/lib64/libreffeature.so
 vendor/lib64/libskewknob.so
 vendor/lib64/libstandbyfeature.so
 vendor/lib64/libvideooptfeature.so
-vendor/lib64/vendor.qti.hardware.perf2-V1-ndk.so
+vendor/lib64/vendor.qti.hardware.perf2-V1-ndk.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.hardware.power.powermodule-V1-ndk.so
 
 # Peripheral manager
@@ -618,22 +612,6 @@ vendor/bin/hw/vendor.qti.psiclient@1.0-service
 vendor/etc/init/vendor.qti.psiclient@1.0-service.rc
 
 # QCC
-system_ext/app/QCC/QCC.apk
-system_ext/bin/qccsyshal_aidl-service
-system_ext/etc/init/vendor.qti.qccsyshal_aidl-service.rc
-system_ext/etc/permissions/com.qti.qcc.vendor_qcc.xml
-system_ext/etc/vintf/manifest/vendor.qti.qccsyshal_aidl-service.xml
-system_ext/lib64/libqcc.so
-system_ext/lib64/libqcc_file_agent_sys.so
-system_ext/lib64/libqccdme.so
-system_ext/lib64/libqccfileservice.so
-system_ext/lib64/vendor.qti.hardware.qccsyshal@1.0.so
-system_ext/lib64/vendor.qti.hardware.qccsyshal@1.1.so
-system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2.so
-system_ext/lib64/vendor.qti.hardware.qccvndhal@1.0.so
-system_ext/lib64/vendor.qti.qccsyshal_aidl-V1-ndk.so
-system_ext/lib64/vendor.qti.qccsyshal_aidl-halimpl.so
-system_ext/lib64/vendor.qti.qccvndhal_aidl-V1-ndk.so
 vendor/bin/qcc-vendor
 vendor/etc/init/init.qccvendor.rc
 vendor/etc/seccomp_policy/qesdk.policy
@@ -642,7 +620,7 @@ vendor/lib64/libqcc_file_agent.so
 vendor/lib64/libqcc_sdk.so
 vendor/lib64/vendor.qti.qccsyshal_aidl-V1-ndk.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.qccvndhal_aidl-V1-ndk.so;MODULE_SUFFIX=_vendor
-vendor/lib64/vendor.qti.qccvndhal_aidl-halimpl.so
+vendor/lib64/vendor.qti.qccvndhal_aidl-halimpl.so;MODULE_SUFFIX=_vendor
 
 # QCV
 vendor/bin/init.qti.qcv.sh
@@ -743,7 +721,7 @@ vendor/etc/init/vendor.qti.qspmhal-service.rc
 vendor/etc/seccomp_policy/qspm.policy
 vendor/etc/vintf/manifest/vendor.qti.qspmhal-service.xml
 vendor/lib64/libqspm-mem-utils-vendor.so
-vendor/lib64/vendor.qti.qspmhal-V1-ndk.so
+vendor/lib64/vendor.qti.qspmhal-V1-ndk.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.qspmhal-impl.so
 
 # QTI service tracker
@@ -948,13 +926,13 @@ vendor/lib64/libminkdescriptor.so
 vendor/lib64/libminkipcbinder_vendor.so
 vendor/lib64/libminksocket_vendor.so
 vendor/lib64/libqcbor.so
-vendor/lib64/vendor.qti.hardware.minkipcbinder-V1-ndk.so
+vendor/lib64/vendor.qti.hardware.minkipcbinder-V1-ndk.so;MODULE_SUFFIX=_vendor
 
 # Snapdragon services
 vendor/bin/snapdragon_services
 vendor/etc/init/snapdragon_services.rc
 vendor/etc/vintf/manifest/snapdragon_services.xml
-vendor/lib64/vendor.qti.snapdragonServices-V2-ndk.so
+vendor/lib64/vendor.qti.snapdragonServices-V2-ndk.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.snapdragonServices.qape-V1-ndk.so
 
 # SSR
@@ -1026,7 +1004,7 @@ vendor/lib64/libvppcommon.so
 vendor/lib64/libvpphvx.so
 vendor/lib64/libvpplibrary.so
 vendor/lib64/libvpptestutils.so
-vendor/lib64/vendor.qti.hardware.vpp-V1-ndk.so
+vendor/lib64/vendor.qti.hardware.vpp-V1-ndk.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so
 vendor/lib64/vendor.qti.hardware.vpp@1.3.so
@@ -1046,36 +1024,6 @@ vendor/etc/init/init.vendor.wlan.rc
 vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/vendor_cmd.xml
 vendor/etc/wifi/wpa_supplicant_overlay.conf
-
-# WiFi Display (system) - from marvel_g A171WEH.20
-system/framework/WfdCommon.jar;BOOT_JAR|27251f8421652af8abffb1f3fd9449fe0ec64ee5|6d1f1d953c48a414e978263256e2ed3aec1580b7
-system_ext/bin/wfdservice64|6b738758fe3d21d6d53d3fb522e1321b54592fa9
-system_ext/etc/init/wfdservice.rc|907def8565d8f91f531ca7dfad880af05d540b0c
-system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml|6669d5ee462c981663b8ac573d84d334e4eed96c
-system_ext/etc/seccomp_policy/wfdservice64.policy|1e331272649395423b11c575892e0bdc9433b820
-system_ext/etc/wfdconfigsink.xml|7bbf8092ff574be7ed951b1a4026471f51e4b6f5
-system_ext/lib64/libmmrtpdecoder.so|51c486b525879c1239062f0fa6b591c3e0abaaa0
-system_ext/lib64/libmmrtpencoder.so|946d85b6b852ee95e17b40b00c4c85ebfa72c85c
-system_ext/lib64/libwfdavenhancements.so|e5a06c6ea07c0cd4ebb73b030b87bf5e51a553e3
-system_ext/lib64/libwfdclient.so|ae443c8657e680558cce30039409cee1e6ab5505
-system_ext/lib64/libwfdcommonutils.so|27c411978b486ccc075862fa2eff450990b9d47a
-system_ext/lib64/libwfdconfigutils.so|d05d03298caf2e233c69689cf1fed0dd19a02be1
-system_ext/lib64/libwfddisplayconfig.so|2717202736b678390be7518ce6f69a63079e4217
-system_ext/lib64/libwfdmminterface.so|b560306dbc7b2bffb734c8eb6439dd3721f75c12
-system_ext/lib64/libwfdmmsink.so|a250fd4085ec04345db8067f11962f57c3b166f0
-system_ext/lib64/libwfdmmsrc_system.so|69e08746a9557ee5fba3e02a8170032db0fa0105
-system_ext/lib64/libwfdnative.so;SYMLINK=system_ext/priv-app/WfdService/lib/arm64/libwfdnative.so|923acb22f26dc3aab5115cf685a161611e43c018
-system_ext/lib64/libwfdrtsp.so|14eec96c4fa615096c473d5a269ba315a53cfd00
-system_ext/lib64/libwfdservice.so|429839b831a8b16fb858179241dc6183c50bdf13|54624fd8c8ef2932e71c4b3ce176fb712e884f5a
-system_ext/lib64/libwfdsinksm.so|e714120166d6480ada0b629ddd73c499c73c55a2
-system_ext/lib64/libwfduibcinterface.so|62a596c93efa57bdc79b078d74a3ccf4d19d1f58
-system_ext/lib64/libwfduibcsink.so|a6fc5d0245e23648812a535f7338d562c9317f09
-system_ext/lib64/libwfduibcsinkinterface.so|2db07ec7a9a6206d2782439e247b35fbe62a550f
-system_ext/lib64/libwfduibcsrc.so|ac3e0988fb5c36c6c4561f04e0e5d53d7de2ad76
-system_ext/lib64/libwfduibcsrcinterface.so|d19e9b5c35f61cc696a9c999dce6eb11d781bd8c
-system_ext/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so|7b3051498476202797fce711a6dcc42ae6a7b8ea
-system_ext/lib64/vendor.qti.hardware.wifidisplaysession_aidl-V2-ndk.so|b2f864d6ae621758bef6f4081af353e2e11e04d8
-system_ext/priv-app/WfdService/WfdService.apk|7d7e4ce1ec07338f1d2abf39035a8f44714a4a40
 
 # WiFi Display (vendor)
 vendor/bin/wfdhdcphalservice

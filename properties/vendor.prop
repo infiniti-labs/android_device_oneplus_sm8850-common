@@ -1,14 +1,6 @@
 # Audio
-aaudio.hw_burst_min_usec=2000
-aaudio.mmap_exclusive_policy=2
-aaudio.mmap_policy=2
-af.fast_track_multiplier=1
-audio.deep_buffer.media=true
-audio.offload.min.duration.secs=30
-audio.offload.video=true
 audio.spatializer.pose_predictor_type=1
 persist.vendor.audio.spf_restart=true
-ro.af.client_heap_size_kbyte=7168
 ro.audio.flinger_standbytime_ms=1000
 ro.audio.monitorRotation=1
 ro.audio.usecase_validator_enabled=true
@@ -44,31 +36,15 @@ vendor.qc2audio.suspend.enabled=true
 
 # Bluetooth
 bluetooth.core.le_audio.codec_extension_aidl.enabled=true
-bluetooth.device.class_of_device=90,2,12
 bluetooth.hfp.swb.supported=true
-bluetooth.profile.a2dp.source.enabled=true
 bluetooth.profile.asha.central.enabled=true
-bluetooth.profile.avrcp.controller.enabled=false
-bluetooth.profile.avrcp.target.enabled=true
 bluetooth.profile.bap.broadcast.assist.enabled=true
 bluetooth.profile.bap.broadcast.source.enabled=true
 bluetooth.profile.bap.unicast.client.enabled=true
-bluetooth.profile.bas.client.enabled=true
 bluetooth.profile.ccp.server.enabled=true
 bluetooth.profile.csip.set_coordinator.enabled=true
-bluetooth.profile.gatt.enabled=true
 bluetooth.profile.hap.client.enabled=true
-bluetooth.profile.hfp.ag.enabled=true
-bluetooth.profile.hid.device.enabled=true
-bluetooth.profile.hid.host.enabled=true
-bluetooth.profile.map.server.enabled=true
 bluetooth.profile.mcp.server.enabled=true
-bluetooth.profile.opp.enabled=true
-bluetooth.profile.pan.nap.enabled=true
-bluetooth.profile.pan.panu.enabled=true
-bluetooth.profile.pbap.server.enabled=true
-bluetooth.profile.pbap.sim.enabled=false
-bluetooth.profile.sap.server.enabled=false
 bluetooth.profile.vcp.controller.enabled=true
 persist.bluetooth.a2dp.lhdc=true
 persist.bluetooth.a2dp_aac_abr.enable=true
@@ -91,7 +67,6 @@ persist.bluetooth.finder.supported=true
 persist.bluetooth.gamemode=false
 persist.bluetooth.hfp_available_guard=true
 persist.bluetooth.hpm.feature_mask=66,54,28,66,66,28,0x0001
-persist.bluetooth.leaudio_offload.disabled=false
 persist.bluetooth.only_print_to_file_when_prevision=0
 persist.bluetooth.power.stats.enable=true
 persist.bluetooth.rc.drop_auto_play=true
@@ -104,7 +79,6 @@ persist.bluetooth.support.sar=IN|EU|FCC|CE
 persist.bluetooth.testmonitor=false
 persist.sys.fflag.override.settings_bluetooth_hearing_aid=true
 persist.vendor.bluetooth.3rd.lhdcv5.support=true
-persist.vendor.bluetooth.haltest=true
 persist.vendor.bluetooth.host_addon=63
 persist.vendor.bluetooth.leaudio_mode=ums-cg
 persist.vendor.bluetooth.modem_nv_support=true
@@ -234,7 +208,6 @@ debug.sf.earlyGl.sf.duration.90=13111111
 debug.sf.earlyGl.sf.duration=10500000
 debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.enable_gl_backpressure=1
-debug.sf.enable_hwc_vds=0
 debug.sf.late.app.duration.144=10333333
 debug.sf.late.app.duration.165=10333333
 debug.sf.late.app.duration.60=16666666
@@ -279,7 +252,6 @@ ro.hardware.keystore_desede=true
 debug.c2.use_dmabufheaps=1
 debug.stagefright.c2inputsurface=-1
 media.c2.hal.selection=aidl
-media.stagefright.audio.deep=false
 vendor.media.omx=0
 
 # MTE
@@ -300,7 +272,6 @@ persist.vendor.radio.custom_ecc=1
 persist.vendor.radio.enableadvancedscan=true
 persist.vendor.radio.procedure_bytes=SKIP
 persist.vendor.radio.sib16_support=1
-ro.telephony.default_network=26,26
 
 # RCS
 persist.vendor.rcs.singlereg.feature=2

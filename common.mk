@@ -148,6 +148,9 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl \
+    android.hardware.bluetooth.audio-V3-ndk.vendor \
+    android.hardware.bluetooth.audio-V5-ndk.vendor \
+    vendor.qti.hardware.bluetooth.audio-V1-ndk.vendor \
     lib_bt_aptx \
     lib_bt_ble \
     lib_bt_bundle
@@ -367,7 +370,6 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 $(call inherit-product, hardware/oplus/overlay/generic/generic.mk)
-$(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-custom
@@ -384,8 +386,7 @@ PRODUCT_PACKAGES += \
 ifneq ($(TARGET_IS_TABLET),true)
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
-    FrameworksResTargetPhone \
-    NfcResCommon_Sys
+    FrameworksResTargetPhone
 endif
 
 # Partitions
@@ -412,6 +413,9 @@ $(call soong_config_set,qtipower,mode_ext_lib,power-ext-oplus)
 PRODUCT_PACKAGES += \
     qspa_vendor.rc \
     vendor.qti.qspa-service
+
+# QTI
+TARGET_COMMON_QTI_COMPONENTS := alarm audio av bt display gps nfc overlay perf wfd $(if $(filter true,$(TARGET_IS_TABLET)),,telephony)
 
 # RFS
 $(call inherit-product, hardware/oplus/rfs/rfs.mk)
