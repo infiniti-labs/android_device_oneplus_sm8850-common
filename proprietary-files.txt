@@ -607,10 +607,6 @@ vendor/bin/hw/android.hardware.powerstats-service.qti
 vendor/etc/init/android.hardware.powerstats-service.rc
 vendor/etc/vintf/manifest/android.hardware.powerstats-service.xml
 
-# PSI Client
-vendor/bin/hw/vendor.qti.psiclient@1.0-service
-vendor/etc/init/vendor.qti.psiclient@1.0-service.rc
-
 # QCC
 vendor/bin/qcc-vendor
 vendor/etc/init/init.qccvendor.rc
