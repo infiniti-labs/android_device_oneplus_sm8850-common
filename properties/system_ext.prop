@@ -1,12 +1,15 @@
 # Audio
 qcom.hw.aac.encoder=true
-ro.audio.asyncdump.support=1
 ro.oplus.audio.aidl_volume=true
 tunnel.audio.encode=true
 use.voice.path.for.pcm.voip=true
 
 # Bluetooth
-persist.bluetooth.ble.bg_cn.ctrl.mode=1
+persist.bluetooth.finder.supported=true
+bluetooth.hfp.swb.supported=true
+persist.bluetooth.a2dp_aac_abr.enable=true
+persist.bluetooth.bluetooth_asd_enable=true
+persist.bluetooth.btsnoopdefaultmode=disabled
 persist.bluetooth.bqr.choppy_threshold=1,1
 persist.bluetooth.bqr.event_mask=0x8004001E
 persist.bluetooth.bqr.min_interval_ms=6000
@@ -15,7 +18,6 @@ persist.bluetooth.snooplogfilter.profiles.a2dp.enabled=true
 persist.bluetooth.snooplogfilter.profiles.map=fullfilter
 persist.bluetooth.snooplogfilter.profiles.pbap=fullfilter
 persist.bluetooth.snooplogfilter.profiles.rfcomm.enabled=true
-persist.vendor.btstack.enable.lpa=true
 ro.bluetooth.finder.supported=true
 
 # Camera
@@ -37,12 +39,6 @@ persist.vendor.ims.vt.enableadb=3
 
 # Media
 media.aac_51_output_enabled=true
-media.stagefright.enable-aac=true
-media.stagefright.enable-fma2dp=true
-media.stagefright.enable-http=true
-media.stagefright.enable-player=true
-media.stagefright.enable-qcp=true
-media.stagefright.enable-scan=true
 media.stagefright.thumbnail.prefer_hw_codecs=true
 mmp.enable.3g2=true
 persist.mm.enable.prefetch=true
