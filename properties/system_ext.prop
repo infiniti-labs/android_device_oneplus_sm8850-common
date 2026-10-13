@@ -25,8 +25,8 @@ ro.bluetooth.finder.supported=true
 ro.bluetooth.leaudio_offload.supported=true
 
 # Camera
-persist.vendor.camera.privapp.list=org.lineageos.aperture
-vendor.camera.aux.packagelist=org.lineageos.aperture,org.lineageos.aperture.dev
+persist.vendor.camera.privapp.list=org.codeaurora.snapcam
+vendor.camera.aux.packagelist=org.codeaurora.snapcam
 
 # CNE
 persist.vendor.cne.feature=1
