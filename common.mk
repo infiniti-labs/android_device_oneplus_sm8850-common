@@ -217,6 +217,21 @@ TARGET_PROVIDES_FACE_UNLOCK_HAL := true
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.biometrics.face.xml
 
+# FastRPC
+PRODUCT_PACKAGES += \
+    adsprpcd_guestos \
+    cdsprpcd \
+    libadsp_default_listener \
+    libadsprpc \
+    libcdsp_default_listener \
+    libcdsprpc \
+    libmdsprpc \
+    libsdsprpc \
+    libssc_default_listener
+
+$(call soong_config_set_bool,fastrpc,dsp_aidl,true)
+$(call soong_config_set_bool,fastrpc,multimode,true)
+
 # Fastboot
 PRODUCT_PACKAGES += \
     android.hardware.fastboot-service.example_recovery
