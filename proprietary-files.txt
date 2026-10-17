@@ -308,30 +308,30 @@ vendor/etc/init/android.hardware.gatekeeper-service-qti.rc
 vendor/etc/vintf/manifest/android.hardware.gatekeeper-service-qti.xml
 vendor/lib64/hw/libqtigatekeeper.so
 
-# Graphics (Adreno)
-vendor/lib64/egl/eglSubDriverAndroid.so
-vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so
-vendor/lib64/egl/libGLESv1_CM_adreno.so
-vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so
-vendor/lib64/egl/libVkLayer_ADRENO_qprofiler.so
-vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so
-vendor/lib64/egl/libq3dtools_esx.so
-vendor/lib64/libCB.so
-vendor/lib64/libOpenCL.so
-vendor/lib64/libOpenCL_adreno.so
-vendor/lib64/libadreno_app_profiles.so
-vendor/lib64/libadreno_compiler_cl.so
-vendor/lib64/libadreno_utils.so
-vendor/lib64/libgpudataproducer.so
-vendor/lib64/libgsl.so
-vendor/lib64/libkcl.so
-vendor/lib64/libkernelmanager.so
-vendor/lib64/libllvm-glnext.so
-vendor/lib64/libllvm-qcom.so
-vendor/lib64/libllvm-qgl.so
+# Graphics (Adreno) - from OnePlus 15 (CPH2745_17.0.0.101(SP03EX01))
+vendor/lib64/egl/eglSubDriverAndroid.so|5b5352dd3b20dcc2a754b63a9bd675a886aab84c
+vendor/lib64/egl/libEGL_adreno.so;SYMLINK=vendor/lib64/libEGL_adreno.so|629328f75fa0b9778c263d9b598487b187ed969d
+vendor/lib64/egl/libGLESv1_CM_adreno.so|1c37d1cc9b667e0f172aedebb2cbe6a2e3e12f55
+vendor/lib64/egl/libGLESv2_adreno.so;SYMLINK=vendor/lib64/libGLESv2_adreno.so|8dcbd542050effddfa3873f15783d34594b5ef47
+vendor/lib64/egl/libVkLayer_ADRENO_qprofiler.so|4584a8f73fa4ebd8a1746aee5c51820628964fd6
+vendor/lib64/egl/libq3dtools_adreno.so;SYMLINK=vendor/lib64/libq3dtools_adreno.so|ef89c1b09f7c7fd61714e1d3b394008d0a59fffc
+vendor/lib64/egl/libq3dtools_esx.so|139c512b8a73336fb68fbc3b7fa90123da239eba
+vendor/lib64/libCB.so|dd0e65833c0a08923f38ed7cd221e4049b6284d3
+vendor/lib64/libOpenCL.so|1b1ab80a4d20d166afc3d97396f2d50d497a375d
+vendor/lib64/libOpenCL_adreno.so|5edb42bf94e7f395e4cc3f4c811a2dff3ab945d8
+vendor/lib64/libadreno_app_profiles.so|51c294d52f165f9752ec5668b9dda1c26eb62c8c
+vendor/lib64/libadreno_compiler_cl.so|748ed4ff5b08398585acd8e2667ab21fa22cba6a
+vendor/lib64/libadreno_utils.so|5028c0f893cd3cb64a123212086cdca2b4a6116d
+vendor/lib64/libgpudataproducer.so|3d783c36c7cf6776f20c69ab04f3573331cd5a36
+vendor/lib64/libgsl.so|dddd1ca5e5e74e8c4e5da55fafda338271a1214e
+vendor/lib64/libkcl.so|11b684863dbbd3ff92be73e795a5b510b68e5f3a
+vendor/lib64/libkernelmanager.so|fc4297b1e69b637bd50c02c65f4f189fc5cebbc9
+vendor/lib64/libllvm-glnext.so|a92d9cbc936cd32f254a05ba56b492ee01e9ddac
+vendor/lib64/libllvm-qcom.so|8b1129367449428fc12895b48549c6033bc80542
+vendor/lib64/libllvm-qgl.so|12de97f30ed66c90ef5c789a09d9b2494508b812
 
-# Graphics (Vulkan)
-vendor/lib64/hw/vulkan.adreno.so
+# Graphics (Vulkan) - from OnePlus 15 (CPH2745_17.0.0.101(SP03EX01))
+vendor/lib64/hw/vulkan.adreno.so|b57ba726b8e9c93ba67338aeb3e483dabf76812d
 
 # HDCP
 vendor/bin/hdcp1prov
