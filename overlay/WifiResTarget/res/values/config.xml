@@ -32,6 +32,9 @@
          supported by the Wi-Fi HAL. -->
     <bool name="config_wifiStaWithBridgedSoftApConcurrencySupported">true</bool>
 
+    <!-- Do not upgrade the softap config to bridged mode on its own -->
+    <bool name="config_wifiSoftapAutoUpgradeToBridgedConfigWhenSupported">false</bool>
+
     <!-- Use the vendor HAL roaming API to disable firmware roaming. -->
     <bool name="config_wifiUseHalApiToDisableFwRoaming">true</bool>
 
