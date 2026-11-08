@@ -72,6 +72,8 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/etc/seccomp_policy/syshealthmon.policy': blob_fixup()
         .add_line_if_missing('clock_gettime: 1')
         .add_line_if_missing('lseek: 1'),
+    'system_ext/lib64/libwfdavenhancements.so': blob_fixup()
+        .binary_regex_replace(b'\xe8\\\x5e\x40\xf9', b'\xe8\x5a\x40\xf9'),
     'system_ext/lib64/libwfdservice.so': blob_fixup()
         .replace_needed('android.media.audio.common.types-V4-cpp.so', 'android.media.audio.common.types-V5-cpp.so'),
     'vendor/bin/vendor_modprobe.sh': blob_fixup()
