@@ -493,7 +493,6 @@ odm/lib64/libsml.so
 odm/lib64/libsubsys-utils.so
 odm/lib64/libvasapi.so
 odm/lib64/vendor.oplus.hardware.olck_ca-V1-ndk.so
-odm/lib64/vendor.oplus.hardware.subsys_radio-V2-ndk.so:odm/lib64/vendor.oplus.hardware.subsys_radio-oplus-V2-ndk.so
 
 # RIL (UIM)
 product/app/uimgbaservice/uimgbaservice.apk

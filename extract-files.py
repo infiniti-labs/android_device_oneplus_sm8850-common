@@ -66,9 +66,7 @@ blob_fixups: blob_fixups_user_type = {
     'odm/etc/izat.conf': blob_fixup()
         .regex_replace(r'(PROCESS_NAME=xtra-daemon\nPROCESS_ARGUMENT=\nPROCESS_STATE=)ENABLED', r'\1DISABLED'),
     'odm/lib64/libqti-radio-service.so': blob_fixup()
-        .replace_needed('vendor.oplus.hardware.subsys_radio-V2-ndk.so', 'vendor.oplus.hardware.subsys_radio-oplus-V2-ndk.so'),
-    'odm/lib64/vendor.oplus.hardware.subsys_radio-oplus-V2-ndk.so': blob_fixup()
-        .fix_soname(),
+        .replace_needed('vendor.oplus.hardware.subsys_radio-V2-ndk.so', 'vendor.oplus.hardware.subsys_radio-compat-V2-ndk.so'),
     'product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml': blob_fixup()
         .regex_replace('/my_product', '/product'),
     'vendor/etc/seccomp_policy/syshealthmon.policy': blob_fixup()
