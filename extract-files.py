@@ -32,6 +32,10 @@ def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
     return f'{lib}_{partition}' if partition == 'vendor' else None
 
 
+def lib_fixup_odm_suffix(lib: str, partition: str, *args, **kwargs):
+    return f'{lib}_{partition}' if partition == 'odm' else None
+
+
 lib_fixups: lib_fixups_user_type = {
     **lib_fixups,
     (
@@ -45,6 +49,9 @@ lib_fixups: lib_fixups_user_type = {
         'vendor.qti.qccsyshal_aidl-V1-ndk',
         'vendor.qti.qccvndhal_aidl-V1-ndk',
     ): lib_fixup_vendor_suffix,
+    (
+        'vendor.oplus.hardware.subsys_radio-V2-ndk',
+    ): lib_fixup_odm_suffix,
 }
 
 blob_fixups: blob_fixups_user_type = {
@@ -65,8 +72,6 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace(r'/\* (Huo\.Chen@SYSTEM\.RF, 2024/09/06, Add for ICC) \*/', r'# \1'),
     'odm/etc/izat.conf': blob_fixup()
         .regex_replace(r'(PROCESS_NAME=xtra-daemon\nPROCESS_ARGUMENT=\nPROCESS_STATE=)ENABLED', r'\1DISABLED'),
-    'odm/lib64/libqti-radio-service.so': blob_fixup()
-        .replace_needed('vendor.oplus.hardware.subsys_radio-V1-ndk.so', 'vendor.oplus.hardware.subsys_radio-compat-V1-ndk.so'),
     'product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml': blob_fixup()
         .regex_replace('/my_product', '/product'),
     'vendor/etc/seccomp_policy/syshealthmon.policy': blob_fixup()
@@ -76,10 +81,7 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('android.media.audio.common.types-V4-cpp.so', 'android.media.audio.common.types-V5-cpp.so'),
     'vendor/bin/vendor_modprobe.sh': blob_fixup()
         .regex_replace(r'\n.*OPLUS_FEATURE_WIFI_FTM[\s\S]*?OPLUS_FEATURE_WIFI_FTM.*\n', ''),
-    (
-        'vendor/bin/hw/vendor.qti.media.c2@1.0-service',
-        'vendor/bin/hw/vendor.qti.media.c2audio@1.0-service',
-    ): blob_fixup()
+    'vendor/bin/hw/vendor.qti.media.c2@1.0-service': blob_fixup()
         .replace_needed('android.hardware.media.c2-V1-ndk.so', 'android.hardware.media.c2-V2-ndk.so'),
     'vendor/etc/perf/perfboostsconfig.xml': blob_fixup()
         .regex_replace(r'Enable="false"', r'Enable="true"')
@@ -92,10 +94,7 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .regex_replace('.*media_codecs_(google_audio|google_c2|google_telephony|google_video).*\n', '')
         .regex_replace('media_codecs_vendor_audio', 'media_codecs_dolby_vision'),
-    (
-        'vendor/etc/vintf/manifest/c2_manifest_vendor.xml',
-        'vendor/etc/vintf/manifest/c2_manifest_vendor_audio.xml',
-    ): blob_fixup()
+    'vendor/etc/vintf/manifest/c2_manifest_vendor.xml': blob_fixup()
         .regex_replace(r'(\s*)(<name>android.hardware.media.c2</name>)(?:\s*<version>\d+</version>)?', r'\1\2\1<version>2</version>'),
     'vendor/etc/vintf/manifest/qms-saidl.xml': blob_fixup()
         .regex_replace(r'\s*<hal format="aidl">\s*<name>vendor\.qti\.data\.dmapconsent</name>\s*<version>2</version>\s*<fqname>IService/default</fqname>\s*</hal>', ''),

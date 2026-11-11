@@ -35,8 +35,6 @@ vendor.audio.use.sw.mpegh.decoder=true
 vendor.audio.volume.headset.gain.depcal=true
 vendor.audio_hal.period_size=192
 vendor.audio_hal.timecheck_timeoutMS=8000
-vendor.qc2audio.per_frame.flac.dec.enabled=true
-vendor.qc2audio.suspend.enabled=true
 
 # Bluetooth
 bluetooth.core.le_audio.codec_extension_aidl.enabled=true
